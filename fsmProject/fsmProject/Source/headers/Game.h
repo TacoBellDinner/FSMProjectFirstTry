@@ -31,7 +31,7 @@ public:
 
 	//member function prototypes
 	Game();
-	void setupCharacters();
+	void setupChars();
 	void play();
 
 
