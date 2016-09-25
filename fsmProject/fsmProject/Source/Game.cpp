@@ -13,22 +13,33 @@ Game::Game()
 	Initializes the game.
 	*/
 
-	//First, the player and partner.
-	//they'll both start with this much HP
-	const int startingHp = 160;
-
-	//set the pointers to zero so they can be passed into functions
-	player = 0;
-	partner = 0;
-
-	//now have those pointers point to actual objects!
-	player = new Player(this, partner, startingHp);
-	partner = new Partner(this, player, startingHp, Idle::instance());
+	setupChars();
 
 	//now, initialize the other values
 	enemiesNear = false;
-	healThresh = 0.50;
+	healThresh = 0.50; //at 50% of max hp
 
+}
+
+void Game::setupChars()
+{
+	/*
+	Sets up the Player, Partner, and Enemy objects.
+	*/
+	
+	//they'll all start with this much HP
+	const int startingHp = 160;
+
+	//set the pointers to zero so they can be passed into functions
+	pPlayer = 0;
+	pPartner = 0;
+	pEnemy = 0;
+
+	//now have those pointers point to actual objects!
+	pPlayer = new Player(this, partner, startingHp);
+	pPartner = new Partner(this, player, startingHp, Idle::instance());
+	pEnemy = new Enemy(pPlayer, startingHp);
+	
 }
 
 void Game::play()
