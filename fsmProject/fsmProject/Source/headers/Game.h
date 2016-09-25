@@ -11,6 +11,7 @@ Author: Gabriel Cabrera
 #include <vector>
 #include "Player.h"
 #include "Partner.h"
+#include "Enemy.h"
 
 using namespace std;
 
@@ -19,9 +20,10 @@ class Game
 public:
 
 	//member var declarations
-	Player* player;
-	Partner* partner;
-
+	Player* pPlayer;
+	Partner* pPartner;
+	Enemy* pEnemy;
+	
 	bool enemiesNear;
 	float healThresh; 
 	//^when player health below this percentage, prompt healing
@@ -29,6 +31,7 @@ public:
 
 	//member function prototypes
 	Game();
+	void setupCharacters();
 	void play();
 
 
