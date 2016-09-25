@@ -1,3 +1,9 @@
+/*
+Defines things like how the states can switch.
+
+Author: Gabriel Cabrera
+
+*/
 #include "headers/PartnerStates.h"
 #include "headers/Partner.h"
 #include "headers/Player.h"
@@ -337,6 +343,16 @@ void GoTo::execute(Game* game, Partner* partner)
 	cout << "\nCurrently in GoTo state.";
 }
 
+void GoTo::adapt(Game* game, Partner* partner)
+{
+	//when the ai is at its destination, switch it to Idle
+	if (partner->atDest)
+	{
+		partner->changeState(Idle::instance());
+	}
+
+	//pretend there is code here for otherwise traveling :p
+}
 // // // // // // // // // // // // // // // // 
 
 Open* Open::instance()
@@ -358,4 +374,15 @@ void Open::exit(Game* game, Partner* partner)
 void Open::execute(Game* game, Partner* partner)
 {
 	cout << "\nCurrently in Open state.";
+}
+
+void Open::adapt(Game* game, Partner* partner)
+{
+	//if the entity is opened, return to the previous state
+	if (partner->openedEntity)
+	{
+		partner->changeState(partner->pPrevState);
+	}
+
+	//pretend there is code here for otherwise opening something
 }

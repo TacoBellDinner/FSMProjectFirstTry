@@ -1,7 +1,7 @@
 /*
 This defines all the states that the partner AI can use.
 
-Author: Gabriel Cabrera, Mat Buckland
+Author: Gabriel Cabrera
 */
 
 #ifndef PARTNER_STATES_H
