@@ -1,7 +1,5 @@
 #include "headers/Enemy.h"
-#include <iostream>
-
-using namespace std;
+#include "headers/Player.h"
 
 Enemy::Enemy(Player* target, int health)
 {
@@ -13,7 +11,7 @@ Enemy::Enemy(Player* target, int health)
 	maxHealth = health;
 	currHealth = maxHealth;
 
-	inventory = 0; //no inventory needed for this enemy
+	pInventory = 0; //no inventory needed for this enemy
 
 	strength = 30;
 }
