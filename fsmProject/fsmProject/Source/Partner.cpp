@@ -53,6 +53,8 @@ Partner::Partner(
 	canHeal = true;
 	onCommand = false;
 	onSpotPass = false; //no orders to be passive on enemy-spotting, yet
+	atDest = true;
+	openedEntity = false;
 
 	strength = 20;
 	

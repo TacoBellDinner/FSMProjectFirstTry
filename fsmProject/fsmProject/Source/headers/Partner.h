@@ -47,6 +47,8 @@ public:
 
 	bool canHeal; //makes sure not to get to the heal state when unable to heal
 	bool onSpotPass; //whether or not to be passive when an enemy is spotted
+	bool atDest; //whether or not the ai is at its destination
+	bool openedEntity;
 
 	//member function prototypes
 	//constructors

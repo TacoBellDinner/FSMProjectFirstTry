@@ -1,7 +1,8 @@
 /* fsmProgram.cpp : Defines the entry point for the console application.
 //
 Author: Gabriel Cabrera
-Project based on Mat Buckland's West World example
+Project based on Mat Buckland's West World example. So, some of the code could
+look like his.
 
 Current Tasks:
 	Code the AI state transitions with working rules

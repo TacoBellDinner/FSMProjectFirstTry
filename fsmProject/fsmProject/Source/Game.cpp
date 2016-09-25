@@ -59,7 +59,4 @@ void Game::play()
 		Sleep(pause);
 	}
 
-
-
-
 }
