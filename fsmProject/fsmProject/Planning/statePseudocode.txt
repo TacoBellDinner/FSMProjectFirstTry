@@ -1,0 +1,21 @@
+generic State class
+	member vars:
+	pointer to object that had this state
+
+
+	pure virtual State(), enter(), exit(), and execute() methods
+
+Passive class, inherits from Stats
+	Passive() 
+		<this is the constructor>
+		nothing happens here
+
+	Enter(pointer to a partner ai object)
+		<Since we are only coding the transitions, let's just have a message here>
+		send to the console a message about how the ai is entering the Passive State
+
+	Exit(pointer to a partner ai object)
+		send to the console a message about how the ai is exiting the Passive state
+
+^do pretty much the same thing for all the other classes. When the time comes, we can flesh them out to make
+them more unique.

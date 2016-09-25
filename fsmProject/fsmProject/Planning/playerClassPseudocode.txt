@@ -1,0 +1,13 @@
+member vars:
+
+	max health
+	current health
+
+	pointer to the ai companion object
+
+member functions:
+	Player(pointer to the AI companion, health = 100)
+		<constructor>
+
+	takeDamage(damage)
+		reduce current health by the damage parameter given

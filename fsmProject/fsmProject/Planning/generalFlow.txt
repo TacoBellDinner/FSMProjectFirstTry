@@ -1,0 +1,13 @@
+Introduce user to program
+
+While the user didnt choose to quit
+	Show user a list of options
+
+	based on the user's input
+		simulate a battle sequence
+
+		or simulate a dungeon-crawling sequence, with no fights
+
+		or break this loop
+
+Let user press enter to quit

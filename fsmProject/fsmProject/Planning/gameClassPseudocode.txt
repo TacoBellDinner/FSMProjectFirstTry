@@ -1,0 +1,11 @@
+This class is like a sort of controller object, that also keeps
+track of things going on in the game.
+
+member vars:
+	one indicating when enemies are nearby
+	one that defines the threshold for healing
+	pointers to the player and partner objects
+
+member functions:
+	play()
+		does the game loop

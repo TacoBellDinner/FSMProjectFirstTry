@@ -1,0 +1,48 @@
+member vars:
+	pointer to the current state
+	pointer to the previous state
+	pointer to the player that has this character as a partner
+	own health
+	string array of items carried
+	boolean deciding if the ai is currently acting on command
+	^<this decides whether or not the AI can change states automatically. When the AI's done with
+	the jobs it was commanded to do, this boolean gets reset to false>
+
+member functions:
+	PartnerAI(pointer to state to start in = 0, startingHealth = 100)
+		<this is the constructor of the ai class>
+
+		if the pointer to the state to start in isn't 0
+			set the current state pointer to that state
+		otherwise
+			set the current state pointer to Passive, which is the default
+
+		initialize own health to startingHealth
+		initialize own string array of items to contain some healing items
+		set boolean for acting on command to false
+
+
+	changeState(pointer to the new state)
+		make sure both states are valid
+
+		call the exit method of the current state
+		set the pointer for the previous state to that of the current state
+		set the current state pointer to point to the new state
+
+		call the entry method of the new state
+
+	takeCommand(pointer to the new state)
+		set boolean for being on command to true
+		call changeState, passing the pointer passed to this function
+
+
+	update()
+		decide what this ai should do now
+
+		<perhaps the code for changing states should be in the execute functions of the current state?>
+		call execute() function of current state
+
+		
+		
+
+	
